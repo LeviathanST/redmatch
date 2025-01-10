@@ -1,0 +1,2 @@
+- [ ] Shooting can be fired in air.
+- [ ] Change view.
