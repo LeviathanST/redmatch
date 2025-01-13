@@ -12,7 +12,6 @@ use bevy::{
     prelude::{Commands, Component, Cuboid, Mesh, Plane3d, Plugin, ResMut, Transform},
 };
 use bevy_rapier3d::prelude::Collider;
-use target::Environment;
 
 #[derive(Component)]
 pub struct Ground;
@@ -21,9 +20,7 @@ pub struct MapTestPlugin;
 
 impl Plugin for MapTestPlugin {
     fn build(&self, app: &mut bevy::prelude::App) {
-        app.insert_resource(Environment { gravity: 9.8 })
-            .add_systems(Startup, setup)
-            .add_systems(Update, target::apply_gravity);
+        app.add_systems(Startup, setup);
     }
 }
 fn setup(
