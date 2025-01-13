@@ -59,7 +59,7 @@ pub fn shoot(
                             ..Default::default()
                         },
                         BulletTracer::new(
-                            third_person_transform.translation,
+                            global_transform.translation(),
                             ray_intersection.point,
                             0.1,
                             100.,
