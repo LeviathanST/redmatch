@@ -562,6 +562,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy_framepace"
+version = "0.17.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1fa5f7d858e66d0f4c4fe3e1a678da440037ce383c4c51bff3c1fa06a121ebc0"
+dependencies = [
+ "bevy_app",
+ "bevy_diagnostic",
+ "bevy_ecs",
+ "bevy_log",
+ "bevy_reflect",
+ "bevy_render",
+ "bevy_time",
+ "bevy_utils",
+ "bevy_window",
+ "bevy_winit",
+ "spin_sleep",
+]
+
+[[package]]
 name = "bevy_gilrs"
 version = "0.14.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1007,15 +1026,6 @@ dependencies = [
  "glyph_brush_layout",
  "serde",
  "thiserror",
-]
-
-[[package]]
-name = "bevy_third_person_camera"
-version = "0.1.14"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "556053f7d6e6683529528681f60551e6d63cdd9696b961a4fc4cf1719a81b47b"
-dependencies = [
- "bevy",
 ]
 
 [[package]]
@@ -3292,8 +3302,8 @@ version = "0.1.0"
 dependencies = [
  "bevy",
  "bevy_fps_controller",
+ "bevy_framepace",
  "bevy_rapier3d",
- "bevy_third_person_camera",
  "rand",
 ]
 
@@ -3573,6 +3583,15 @@ dependencies = [
  "num-traits",
  "robust",
  "smallvec",
+]
+
+[[package]]
+name = "spin_sleep"
+version = "1.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4196b31c8c1dc443543be4f4d0e827657fbf2b87387e5c8f229b14f1c046718a"
+dependencies = [
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
